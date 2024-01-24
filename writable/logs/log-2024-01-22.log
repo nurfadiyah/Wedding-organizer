@@ -1,0 +1,885 @@
+INFO - 2024-01-22 08:54:22 --> REDIRECTED ROUTE at http://localhost:8080/home
+ERROR - 2024-01-22 09:38:45 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 C:\xampp\htdocs\databantuan\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 C:\xampp\htdocs\databantuan\app\Database\Migrations\2024-01-22-092710_Data.php(44): CodeIgniter\Database\Forge->createTable('blog')
+#5 C:\xampp\htdocs\databantuan\system\Database\MigrationRunner.php(865): App\Database\Migrations\Data->up()
+#6 C:\xampp\htdocs\databantuan\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\databantuan\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\databantuan\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\databantuan\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\databantuan\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-22 12:19:17 --> mysqli_sql_exception: Table 'datapkh.users' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:19:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:19:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:19:17 --> [Caused by] mysqli_sql_exception: Table 'datapkh.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:47:04 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:47:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:04 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:47:08 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:47:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:08 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:47:30 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:47:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:47:30 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:49:40 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:49:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:40 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:49:42 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:49:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:42 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:49:43 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:49:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:43 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 12:49:45 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 12:49:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:49:45 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:50:54 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(12): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:51:18 --> ErrorException: Undefined variable: datapkh
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datapkh', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(12): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:51:20 --> ErrorException: Undefined variable: datapkh
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datapkh', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(12): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:52:01 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(12): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:10 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:11 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:13 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:14 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:15 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 12:54:32 --> ErrorException: Undefined variable: data
+in APPPATH\Views\data\pkh.php on line 27.
+ 1 APPPATH\Views\data\pkh.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 13:48:45 --> mysqli_sql_exception: Can't create database 'datapkh'; database exists in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE DATABASE...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 C:\xampp\htdocs\databantuan\system\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 C:\xampp\htdocs\databantuan\app\Config\Routes.php(10): CodeIgniter\Database\Forge->createDatabase('datapkh')
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 13:48:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to create the specified database.
+in SYSTEMPATH\Database\Forge.php on line 247.
+ 1 APPPATH\Config\Routes.php(10): CodeIgniter\Database\Forge->createDatabase('datapkh')
+ 2 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+ 3 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 13:48:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't create database 'datapkh'; database exists
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 2 APPPATH\Config\Routes.php(10): CodeIgniter\Database\Forge->createDatabase('datapkh')
+ 3 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 13:48:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't create database 'datapkh'; database exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 3 SYSTEMPATH\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 4 APPPATH\Config\Routes.php(10): CodeIgniter\Database\Forge->createDatabase('datapkh')
+ 5 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 13:48:45 --> [Caused by] mysqli_sql_exception: Can't create database 'datapkh'; database exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE datapkh CHARACTER SET utf8 COLLATE utf8_general_ci')
+ 5 APPPATH\Config\Routes.php(10): CodeIgniter\Database\Forge->createDatabase('datapkh')
+ 6 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:03:37 --> Error: Call to undefined function base_url_url()
+in APPPATH\Views\data\add.php on line 11.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/add', [], true)
+ 4 APPPATH\Controllers\Data.php(18): view('data/add')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:03:55 --> Error: Call to undefined function site_url_url()
+in APPPATH\Views\data\add.php on line 11.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/add', [], true)
+ 4 APPPATH\Controllers\Data.php(18): view('data/add')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:05:46 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:06:19 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:08:10 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:09:21 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:09:52 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:12:04 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:21:50 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:22:34 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 15:22:58 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 16:16:31 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 16:17:10 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 17:45:01 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 17:46:51 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 17:47:56 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 17:48:23 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 17:52:23 --> ErrorException: Undefined variable: data
+in APPPATH\Controllers\Data.php on line 22.
+ 1 APPPATH\Controllers\Data.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'C:\\xampp\\htdocs\\databantuan\\app\\Controllers\\Data.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:21:06 --> ErrorException: Undefined property: stdClass::$no
+in APPPATH\Views\data\pkh.php on line 46.
+ 1 APPPATH\Views\data\pkh.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$no', 'C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\databantuan\\app\\Views\\data\\pkh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('data/pkh', [], true)
+ 5 APPPATH\Controllers\Data.php(13): view('data/pkh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:51:01 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRows()
+in APPPATH\Controllers\Data.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:51:24 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRows()
+in APPPATH\Controllers\Data.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:53:07 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRows()
+in APPPATH\Controllers\Data.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:53:45 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRows()
+in APPPATH\Controllers\Data.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-22 19:53:47 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRows()
+in APPPATH\Controllers\Data.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 20:08:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'bantuan' in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bantuan', 3306, '', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'bantuan' in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-22 20:08:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'bantuan'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bantuan`', [], false)
+ 3 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-22 20:09:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'bantuan' in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bantuan', 3306, '', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'bantuan' in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-22 20:09:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'bantuan'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bantuan`', [], false)
+ 3 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')

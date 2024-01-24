@@ -1,0 +1,416 @@
+ERROR - 2024-01-23 05:21:16 --> mysqli_sql_exception: Table 'datapkh.data' doesn't exist in C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\databantuan\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\databantuan\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\databantuan\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\databantuan\app\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(941): App\Controllers\Data->index()
+#6 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#7 C:\xampp\htdocs\databantuan\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\databantuan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\databantuan\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-23 05:21:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 2 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-23 05:21:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 4 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+CRITICAL - 2024-01-23 05:21:16 --> [Caused by] mysqli_sql_exception: Table 'datapkh.data' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `data`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data`', [], false)
+ 5 APPPATH\Controllers\Data.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\databantuan\\public\\index.php')
+ERROR - 2024-01-23 07:37:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'yuknikah' in C:\xampp\htdocs\Yuknikah\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\Yuknikah\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'yukNikah', 3306, '', 0)
+#1 C:\xampp\htdocs\Yuknikah\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Yuknikah\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Yuknikah\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\xampp\htdocs\Yuknikah\app\Config\Routes.php(9): CodeIgniter\Database\Config::forge()
+#5 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+#6 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Yuknikah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Yuknikah\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'yuknikah' in C:\xampp\htdocs\Yuknikah\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Yuknikah\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Yuknikah\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Yuknikah\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\xampp\htdocs\Yuknikah\app\Config\Routes.php(9): CodeIgniter\Database\Config::forge()
+#4 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+#5 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\Yuknikah\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Yuknikah\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Yuknikah\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 07:37:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'yuknikah'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Config\Routes.php(9): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 07:57:41 --> ErrorException: Undefined variable: bantuan
+in APPPATH\Views\Acara\Get.php on line 34.
+ 1 APPPATH\Views\Acara\Get.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: bantuan', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 34, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(9): view('acara/get')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 07:58:35 --> ErrorException: Undefined variable: acara
+in APPPATH\Views\Acara\Get.php on line 34.
+ 1 APPPATH\Views\Acara\Get.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 34, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(9): view('acara/get')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 07:58:38 --> ErrorException: Undefined variable: acara
+in APPPATH\Views\Acara\Get.php on line 34.
+ 1 APPPATH\Views\Acara\Get.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 34, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(9): view('acara/get')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 07:58:58 --> ErrorException: Undefined variable: yukNikah
+in APPPATH\Views\Acara\Get.php on line 34.
+ 1 APPPATH\Views\Acara\Get.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: yukNikah', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 34, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(9): view('acara/get')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:25:37 --> ErrorException: Undefined variable: db
+in APPPATH\Controllers\BaseController.php on line 57.
+ 1 APPPATH\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\BaseController.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:34:49 --> ErrorException: Undefined variable: db
+in APPPATH\Controllers\BaseController.php on line 57.
+ 1 APPPATH\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\BaseController.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:34:52 --> ErrorException: Undefined variable: db
+in APPPATH\Controllers\BaseController.php on line 57.
+ 1 APPPATH\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\BaseController.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:35:26 --> ErrorException: Undefined variable: db
+in APPPATH\Controllers\BaseController.php on line 57.
+ 1 APPPATH\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\BaseController.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:36:46 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Controllers\Acara.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:46:32 --> ErrorException: Undefined property: stdClass::$nama_acara
+in APPPATH\Views\Acara\Get.php on line 33.
+ 1 APPPATH\Views\Acara\Get.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:48:02 --> ErrorException: Undefined property: stdClass::$nama_acara
+in APPPATH\Views\Acara\Get.php on line 33.
+ 1 APPPATH\Views\Acara\Get.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:48:27 --> ErrorException: Undefined property: stdClass::$nama_acara
+in APPPATH\Views\Acara\Get.php on line 33.
+ 1 APPPATH\Views\Acara\Get.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:49:06 --> ErrorException: Undefined variable: value
+in APPPATH\Views\Acara\Get.php on line 30.
+ 1 APPPATH\Views\Acara\Get.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: value', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 30, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:50:38 --> ErrorException: Undefined property: stdClass::$nama_acara
+in APPPATH\Views\Acara\Get.php on line 33.
+ 1 APPPATH\Views\Acara\Get.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 08:50:57 --> ErrorException: Undefined property: stdClass::$info_acara
+in APPPATH\Views\Acara\Get.php on line 35.
+ 1 APPPATH\Views\Acara\Get.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$info_acara', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Yuknikah\\app\\Views\\Acara\\Get.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 5 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:02:25 --> Error: Call to undefined function sorttime()
+in APPPATH\Views\Acara\Get.php on line 34.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acara/get', [], true)
+ 4 APPPATH\Controllers\Acara.php(13): view('acara/get', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:34:49 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:38:04 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:38:28 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:39:00 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:39:10 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:39:55 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:41:00 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:42:43 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:45:29 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:45:35 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:46:08 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:47:11 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:47:28 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:54:07 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 11:56:03 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+CRITICAL - 2024-01-23 12:02:58 --> ErrorException: Undefined variable: request
+in APPPATH\Controllers\Acara.php on line 21.
+ 1 APPPATH\Controllers\Acara.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'C:\\xampp\\htdocs\\Yuknikah\\app\\Controllers\\Acara.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Acara->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
+INFO - 2024-01-23 12:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 12:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-23 13:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-23 14:02:38 --> TypeError: Return value of App\Controllers\Auth::index() must be of the type string, none returned
+in APPPATH\Controllers\Auth.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Yuknikah\\public\\index.php')
